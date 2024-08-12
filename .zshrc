@@ -1,9 +1,7 @@
 # ~~~~~~~~~~~~~~~ Path configuration ~~~~~~~~~~~~~~~~~~~~~~~~
 
-# Enable Zsh's extended globbing and null_glob options
 setopt extended_glob null_glob
 
-# Define an array of directories to add to PATH
 path=(
     $path                           # Keep existing PATH entries
     $HOME/bin
@@ -20,7 +18,6 @@ path=(
 typeset -U path
 path=($^path(N-/))
 
-# Export the updated PATH
 export PATH
 
 
@@ -110,7 +107,7 @@ setopt SHARE_HISTORY      # Share history between sessions
     else
       fpath+=($HOME/.zsh/pure)
     fi
-	    
+
 autoload -U promptinit; promptinit
 prompt pure
 
