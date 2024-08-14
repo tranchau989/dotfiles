@@ -23,30 +23,12 @@ export PATH
 
 # ~~~~~~~~~~~~~~~ SSH ~~~~~~~~~~~~~~~~~~~~~~~~
 
-# Start the SSH agent with a lifetime of 4 hours if not running already
-# From Arch wiki.
 
-if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-    ssh-agent -t 4h > "$XDG_RUNTIME_DIR/ssh-agent.env"
-fi
-if [[ ! -f "$SSH_AUTH_SOCK" ]]; then
-    source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
-fi
+# Using GPG + YubiKey for ssh.
 
-# Check if keys are added.
-# If no keys are found (exit code 1), add the specified keys.
-
-ssh-add -l &>/dev/null
-
-if [ "$?" -eq 1 ]; then
-    if [[ "$OSTYPE" == darwin* ]]; then
-
-        # Get the password from the Apple Keychain when running on MacOS
-        ssh-add --apple-use-keychain -t 4h "$HOME/.ssh/gh_macbook_pro" 2>/dev/null
-    else
-        ssh-add -t 4h "$HOME/.ssh/gh_thinkpad_arch" 2>/dev/null
-    fi
-fi
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
 
 
 # ~~~~~~~~~~~~~~~ Environment Variables ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -97,6 +79,8 @@ setopt SHARE_HISTORY      # Share history between sessions
 
 
 # ~~~~~~~~~~~~~~~ Prompt ~~~~~~~~~~~~~~~~~~~~~~~~
+
+PURE_GIT_PULL=0
 
 
 # Moved to pure prompt 27-07-2024 because it's even cleaner
