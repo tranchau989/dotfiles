@@ -2173,7 +2173,7 @@ c.window.hide_decoration = True
 
 ## Default zoom level.
 ## Type: Perc
-c.zoom.default = "150%"
+c.zoom.default = "125%"
 
 ## Available zoom levels.
 ## Type: List of Perc
