@@ -1120,7 +1120,7 @@ c.colors.webpage.darkmode.enabled = True
 ##   - ask-block-thirdparty: Ask how to proceed for normal page loads, but silently block resource loads.
 ##   - block: Automatically block loading on certificate errors.
 ##   - load-insecurely: Force loading pages despite certificate errors. This is *insecure* and should be avoided. Instead of using this, consider fixing the underlying issue or importing a self-signed certificate via `certutil` (or Chromium) instead.
-# c.content.tls.certificate_errors = 'ask'
+c.content.tls.certificate_errors = "ask-block-thirdparty"
 
 ## How navigation requests to URLs with unknown schemes are handled.
 ## Type: String
