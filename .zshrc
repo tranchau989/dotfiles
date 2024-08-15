@@ -10,8 +10,6 @@ path=(
     $SCRIPTS
     $HOME/.krew/bin
     $HOME/.rd/bin                   # Rancher Desktop
-    # $HOME/*/bin(N)                # Add all bin directories under HOME
-    # /usr/local/*/bin(N)           # Add all bin directories under /usr/local
 )
 
 # Remove duplicate entries and non-existent directories
@@ -26,13 +24,11 @@ export PATH
 
 # Using GPG + YubiKey for ssh.
 
-# export PINENTRY_USER_DATA="USE_TTY=1"
 export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
 gpgconf --launch gpg-agent
 gpg-connect-agent updatestartuptty /bye > /dev/null 2>&1
-
 
 
 # ~~~~~~~~~~~~~~~ Environment Variables ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -195,9 +191,6 @@ zstyle ':completion:*' menu select
 
 # ~~~~~~~~~~~~~~~ Misc ~~~~~~~~~~~~~~~~~~~~~~~~
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/mischa/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 
 
