@@ -37,14 +37,17 @@ gpg-connect-agent updatestartuptty /bye > /dev/null 2>&1
 
 
 # Set to superior editing mode
+
 set -o vi
 
 export VISUAL=nvim
 export EDITOR=nvim
+export TERM="tmux-256color"
 
 export BROWSER="firefox"
 
 # Directories
+
 export REPOS="$HOME/Repos"
 export GITUSER="mischavandenburg"
 export GHREPOS="$REPOS/github.com/$GITUSER"
@@ -55,12 +58,11 @@ export ICLOUD="$HOME/icloud"
 export ZETTELKASTEN="$HOME/Zettelkasten"
 
 # Go related. In general all executables and scripts go in .local/bin
+
 export GOBIN="$HOME/.local/bin"
 export GOPRIVATE="github.com/$GITUSER/*,gitlab.com/$GITUSER/*"
 # export GOPATH="$HOME/.local/share/go"
 export GOPATH="$HOME/go/"
-
-export TERM="tmux-256color"
 
 
 # ~~~~~~~~~~~~~~~ History ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -107,6 +109,7 @@ alias lab='cd $LAB'
 alias dot='cd $GHREPOS/dotfiles'
 alias repos='cd $REPOS'
 alias ghrepos='cd $GHREPOS'
+alias gr='ghrepos'
 alias cdgo='cd $GHREPOS/go/'
 alias rob='cd $REPOS/github.com/rwxrob'
 
