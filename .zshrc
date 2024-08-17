@@ -164,6 +164,10 @@ alias kn='kubens'
 
 alias fgk='flux get kustomizations'
 
+# Pass
+
+alias pc='pass show -c'
+
 
 # ~~~~~~~~~~~~~~~ Sourcing ~~~~~~~~~~~~~~~~~~~~~~~~
 
