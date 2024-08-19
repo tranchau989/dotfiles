@@ -89,15 +89,18 @@ fi
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # get the font out of the way first, it's the most annoying
-#
-# install for Mac using brew. For ubuntu:
 
+# install for Mac using brew.
+# brew install --cask font-iosevka-nerd-font
+# brew install --cask font-ubuntu-mono-nerd-font
+
+# For ubuntu:
 # mkdir -p $HOME/.local/share/fonts
 # cp $PWD/fonts/UbuntuMono* $HOME/.local/share/fonts
 
 # brew packages Mac
-# amethyst fzf nvim exa hugo bash-completion@2 newsboat kubectl starship
 # brew install --cask alacritty
+# amethyst fzf nvim exa hugo bash-completion@2 newsboat kubectl starship
 
 # ubuntu packages apt
 # sudo apt install ripgrep gh
@@ -115,19 +118,12 @@ fi
 # create symbolic link to neovim from vim when not using neovim on
 # Ubuntu systems, because I use the v alias everywhere.
 # sudo ln -sf /usr/bin/vim /usr/bin/nvim
-#
-
-# Fedora
-
-# brew install fd fzf ripgrep
-
-# /usr/bin/python3 -m pip install pynvim
 
 # Arch Linux
 
 # pacman packages:
-# zsh zsh-completions ttf-ubuntu-mono-nerd fzf npm unzip xclip tmux ripgrep fd
-#
+# zsh zsh-completions ttf-ubuntu-mono-nerd fzf npm unzip tmux ripgrep fd
+
 # set up prompt
 # mkdir -p "$HOME/.zsh"
 # git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
