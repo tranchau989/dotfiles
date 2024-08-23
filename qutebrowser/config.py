@@ -2188,6 +2188,9 @@ c.zoom.default = "125%"
 # c.zoom.text_only = False
 
 ## Bindings for normal mode
+
+config.bind("<Meta-d>", "config-cycle colors.webpage.darkmode.enabled true false")
+
 # config.bind("'", 'mode-enter jump_mark')
 # config.bind('+', 'zoom-in')
 # config.bind('-', 'zoom-out')
