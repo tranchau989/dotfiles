@@ -122,8 +122,8 @@ fi
 # Arch Linux
 
 # pacman packages:
-# zsh zsh-completions ttf-ubuntu-mono-nerd fzf npm unzip tmux ripgrep fd
+sudo pacman -Syu zsh zsh-completions ttf-ubuntu-mono-nerd fzf npm unzip tmux ripgrep fd
 
 # set up prompt
-# mkdir -p "$HOME/.zsh"
-# git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
+mkdir -p "$HOME/.zsh"
+git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
