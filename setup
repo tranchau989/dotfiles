@@ -35,7 +35,7 @@ common_directories=(
   "$XDG_CONFIG_HOME/skhd"
   "$XDG_CONFIG_HOME/k9s"
   "$XDG_CONFIG_HOME/qutebrowser"
-  "$XDG_CONFIG_HOME/sway"
+  "$XDG_CONFIG_HOME/waybar"
 )
 
 common_items=(
@@ -48,7 +48,8 @@ common_items=(
   ".zprofile:$HOME/.zprofile"
   ".zshrc:$HOME/.zshrc"
   "qutebrowser/config.py:$XDG_CONFIG_HOME/qutebrowser/config.py"
-  "sway/config:$XDG_CONFIG_HOME/sway/config"
+  "waybar/config.jsonc:$XDG_CONFIG_HOME/waybar/config.jsonc"
+  "waybar/style.css:$XDG_CONFIG_HOME/waybar/style.css"
 )
 
 create_directories "${common_directories[@]}"
@@ -122,8 +123,8 @@ fi
 # Arch Linux
 
 # pacman packages:
-sudo pacman -Syu zsh zsh-completions ttf-ubuntu-mono-nerd fzf npm unzip tmux ripgrep fd
+# sudo pacman -Syu zsh zsh-completions ttf-ubuntu-mono-nerd fzf npm unzip tmux ripgrep fd
 
 # set up prompt
-mkdir -p "$HOME/.zsh"
-git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
+# mkdir -p "$HOME/.zsh"
+# git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
