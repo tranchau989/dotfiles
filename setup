@@ -36,6 +36,7 @@ common_directories=(
   "$XDG_CONFIG_HOME/k9s"
   "$XDG_CONFIG_HOME/qutebrowser"
   "$XDG_CONFIG_HOME/waybar"
+  "$XDG_CONFIG_HOME/hypr"
 )
 
 common_items=(
@@ -50,6 +51,7 @@ common_items=(
   "qutebrowser/config.py:$XDG_CONFIG_HOME/qutebrowser/config.py"
   "waybar/config.jsonc:$XDG_CONFIG_HOME/waybar/config.jsonc"
   "waybar/style.css:$XDG_CONFIG_HOME/waybar/style.css"
+  "hypr/hyprland.conf:$XDG_CONFIG_HOME/hypr/hyprland.conf"
 )
 
 create_directories "${common_directories[@]}"
