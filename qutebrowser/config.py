@@ -888,7 +888,7 @@ c.colors.webpage.darkmode.enabled = True
 ##   - none: Disable access to clipboard.
 ##   - access: Allow reading from and writing to the clipboard.
 ##   - access-paste: Allow accessing the clipboard and pasting clipboard content.
-# c.content.javascript.clipboard = 'none'
+c.content.javascript.clipboard = "access-paste"
 
 ## Enable JavaScript.
 ## Type: Bool
