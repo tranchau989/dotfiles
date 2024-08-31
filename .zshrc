@@ -2,18 +2,21 @@
 
 
 # Using GPG + YubiKey for ssh.
+# Don't execute when in dev container
 
 
-export GPG_TTY="$(tty)"
+if [[ -z "$REMOTE_CONTAINERS" && -z "$CODESPACES" && -z "$DEVCONTAINER_TYPE" ]]; then
+  export GPG_TTY="$(tty)"
+  unset SSH_AGENT_PID
 
-unset SSH_AGENT_PID
-
-if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+  if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
   export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
-fi
+  fi
 
-# gpgconf --launch gpg-agent
-# gpg-connect-agent updatestartuptty /bye > /dev/null 2>&1
+  gpgconf --launch gpg-agent
+  gpg-connect-agent updatestartuptty /bye > /dev/null 2>&1
+
+fi
 
 
 # ~~~~~~~~~~~~~~~ Environment Variables ~~~~~~~~~~~~~~~~~~~~~~~~
