@@ -56,6 +56,8 @@ path=(
     $SCRIPTS
     $HOME/.krew/bin
     $HOME/.rd/bin                   # Rancher Desktop
+    /home/vscode/.local/bin         # Dev Container Specifics
+    /root/.local/bin                # Dev Container Specifics
 )
 
 # Remove duplicate entries and non-existent directories
@@ -174,6 +176,14 @@ alias pc='pass show -c'
 
 source "$HOME/.privaterc"
 source <(fzf --zsh)
+
+
+# ~~~~~~~~~~~~~~~ Dev Container Specifics ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+if [ -d "/home/linuxbrew/.linuxbrew" ]; then
+     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
 
 
 # ~~~~~~~~~~~~~~~ Completion ~~~~~~~~~~~~~~~~~~~~~~~~
