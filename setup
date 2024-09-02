@@ -72,9 +72,6 @@ fi
 # ln -sf "$PWD/.bash_profile" "$HOME"/.bash_profile
 # ln -sf "$PWD/.bashrc" "$HOME"/.bashrc
 
-# set up blog
-# git clone git@github.com:mischavandenburg/hugo-PaperModX-theme.git themes/PaperModX --depth=1
-
 # Zettelkasten
 # This one's a little tricky on MacOS because the path contains a space. It needs to be stored as an array,
 # and when called it needs to be quoted.
