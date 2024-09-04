@@ -186,12 +186,9 @@ alias fgk='flux get kustomizations'
 
 alias pc='pass show -c'
 
+# Devpod
 
-# ~~~~~~~~~~~~~~~ Sourcing ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-source "$HOME/.privaterc"
-source <(fzf --zsh)
+alias ds='devpod ssh'
 
 
 # ~~~~~~~~~~~~~~~ Completion ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -213,4 +210,16 @@ zstyle ':completion:*' menu select
 # talosctl completion zsh > ~/.zfunc/_talosctl
 
 
+# ~~~~~~~~~~~~~~~ Sourcing ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+source "$HOME/.privaterc"
+source <(fzf --zsh)
+
+eval "$(direnv hook zsh)"
+
 # ~~~~~~~~~~~~~~~ Misc ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+fpath+=~/.zfunc; autoload -Uz compinit; compinit
