@@ -193,7 +193,7 @@ alias ds='devpod ssh'
 # Bluetooth
 
 # Airpods Max
-alias btm='bluetoothctl connect D3:F3:3E:FF:8F:7A'
+alias btm='bluetoothctl connect 08:FF:44:0E:EA:D6'
 
 # Airpods
 alias bta='bluetoothctl connect 08:65:18:78:BD:A6'
