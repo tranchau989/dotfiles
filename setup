@@ -52,6 +52,8 @@ common_items=(
   "waybar/config.jsonc:$XDG_CONFIG_HOME/waybar/config.jsonc"
   "waybar/style.css:$XDG_CONFIG_HOME/waybar/style.css"
   "hypr/hyprland.conf:$XDG_CONFIG_HOME/hypr/hyprland.conf"
+  "hypr/hypridle.conf:$XDG_CONFIG_HOME/hypr/hypridle.conf"
+  "hypr/hyprlock.conf:$XDG_CONFIG_HOME/hypr/hyprlock.conf"
 )
 
 create_directories "${common_directories[@]}"
